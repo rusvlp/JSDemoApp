@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css" >
+    <title>Java(script)</title>
+</head>
+<body>
+    <div class="ts">
+       
+    </div> 
+    <div class="sleep">
+        <div id = "wakeup" class="sleepel">
+            <img src="images/log_in.png" alt="enter" onclick = "sleep()">
+        </div>
+        <div id = "sleepInfo" class="sleepel">
+            <img src="images/user.png" alt="">
+            <div class = "sleepusername" id = "sun"></div>
+            <div class = "sleepDate" id = "sd"></div>
+        </div>
+        <div class="sleepel" ></div>
+    </div>
+    <div id = "content">
+        <div id = "header">
+            <div id = "logo">
+                <img src = images/logo.png id = "logoimg">
+                <div class = "logotext">JavaScript</div>
+            </div>
+        
+            <div id = "usersign">
+                <div id = "user">
+                    <div class = "username" id = "topleftusername"></div>
+                    <div id = "usericon">
+                        <img src = "images/user.png" class = "img1" onclick="showMenu()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="mainel" id = "jslogo">
+                <div class = "jslogocontainer">
+                    <img src="images/js.png" alt="">
+                </div>
+            </div>
+            <div class = "jsinfo">
+                <div class = "jiel" id = "jsname">
+                    <div class="jssign">JavaScript</div>
+                </div>
+                <div class="jiel" id = "jsdesc">
+                    JavaScript ("JS" для краткости) — это полноценный динамический язык программирования, 
+                    который применяется к HTML документу, и может обеспечить динамическую интерактивность
+                    на веб-сайтах. Его разработал Brendan Eich, сооснователь проекта Mozilla, Mozilla Foundation и Mozilla Corporation.
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="info2">
+                    <div class = "jiel2">
+                        <div class="aboutjs" style="padding-right: 0;">Для чего используется этот язык</div>
+                    </div>
+                    <div class="jiel2 i2d">
+                        Это язык программирования, который используют для написания frontend- 
+                        и backend-частей сайтов, а также мобильных приложений. 
+
+                        JS поддерживают все популярные браузеры. Во frontend-части сайтов язык используют для 
+                        создания интерактива (анимаций, всплывающих форм, автозаполнения), так как он связан 
+                        с HTML и CSS и может ими манипулировать. В backend-части с языком JavaScript работают 
+                        на платформе Node.js. С ее помощью, например, разрабатывают серверные веб-приложения и 
+                        подключают библиотеки. 
+                    </div>
+                
+            </div>
+            <div class="m2pct">
+                <div class="m2pctel">
+                    <div class="hcjcont html">
+                        <img src="images/html.png" alt="html">
+                    </div>
+                </div>
+                <div class="m2pctel">
+                    <div class="hcjcont css">
+                        <img src="images/css.png" alt="css">
+                    </div>
+                </div>
+                <div class="m2pctel">
+                    <div class="hcjcont js">
+                        <img src="images/javascript.png" alt="js">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main main3">
+            <div class="mainel" id = "prosimg">
+                <div class = "proscontainer">
+                    <img src="images/thumbup.png" alt="">
+                </div>
+            </div>
+            <div class = "jsinfo">
+                <div class = "jiel prosh" id = "jsname">
+                    <div class="jssign">Где применяется JS?</div>
+                </div>
+                <div class="jiel prosd" id = "jsdesc">
+                    Клиентская часть веб—приложений (frontend), серверная часть веб—приложений (backend), Мобильные приложения на Android и iOS.
+                </div>
+            </div>
+        </div>
+
+        <div class="main main4" style="flex-direction: row-reverse;">
+            <div class="mainel" id = "consimg">
+                <div class = "conscontainer">
+                    <img src="images/thumbup.png" alt="">
+                </div>
+            </div>
+            <div class = "jsinfo" style = "background-color: #F7CCAC;;">
+                <div class = "jiel consh" id = "jsname">
+                    <div class="jssign">Когда не стоит применять JS?</div>
+                </div>
+                <div class="jiel consd" id = "jsdesc">
+                    JS не умеет читать, записывать или запускать файлы напрямую с устройства.
+Чтобы связать всплывающее окно с основной страницей, придется писать дополнительный код, иначе они не смогут обмениваться введенными данными.
+JS взаимодействует только с тем сервером, с которого открыта страница. Для работы со сторонними сайтами и сервисами придется прописать дополнительный код с обеих сторон, чтобы они могли взаимодействовать друг с другом.
+                </div>
+            </div>
+        </div>
+
+        <div class="string">
+            <div class="stimg"></div>
+            <div class="strel">
+                <form onsubmit="stringComparator.compare()" class = "strelcont" method="dialog">
+                    <div class = "strcl" style = "font-size: 30pt; display: flex; justify-content: center; flex-direction: column;">
+                        <div>Сравнение строк</div>
+                        <div style="font-size: 15pt;">Сравнение на длину строк. Если они равны - цвет заднего фона будет зеленым, иначе - красным</div>
+                    </div>
+                    <div class="strcl">
+                        <label for="str1">Строка 1</label>
+                        <input type="text" name="" id="str1">
+                    </div>
+                    <div class="strcl">
+                        <label for="str1">Строка 2</label>
+                        <input type="text" name="" id="str2">
+                    </div>
+                    <div style = "display: flex; justify-content: center;">
+                        <input type="submit" value = "Проверить" class = "stringsubmit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="array">
+            <div class="arrayimg"></div>
+            <div class="arraycon">
+                <div class = "arraysign">Массив</div>
+                <div class = "arel">Введите массив. Будет выполнен поиск максимального и минимального значения.</div>
+                <div class = "arel">
+                    <form onsubmit="findMinMax()" method="dialog">
+                        <input type="text" class = "arr">
+                        <input type="submit" class="arr" id = "arrsubm" value="Найти">
+                    </form>
+                    <div>
+                        <div class = "minmax"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="timer">
+            <div class="timercore">
+                <div class="timerel hours">00</div>
+                <div class="timerel minutes">00</div>
+                <div class="timerel seconds">00</div>
+            </div>
+            <div class="timerbtns">
+                <div class="timerbtn stop" onclick = "timer.disable()">СТОП</div>
+                <div class="timerbtn pause" onclick = "timer.pause()">ПАУЗА</div>
+                <div class="timerbtn start" onclick = "timer.enable()">СТАРТ</div>
+            </div>
+        </div>
+
+        <div class="rightTimer">
+            <div class="rtcore">
+                <div class="rtbtns rthr">
+                    <div class="numrt" id = "hrsC">00</div>
+                    <div class="btnsrt">
+                        <div class="ctrlbtn up" onclick = "rtController.increaseBtn(3)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                        <div class="ctrlbtn down" onclick = "rtController.decreaseBtn(3)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="rtbtns rtm">
+                    <div class="numrt" id = "minC">00</div>
+                    <div class="btnsrt">
+                        <div class="ctrlbtn up" onclick = "rtController.increaseBtn(2)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                        <div class="ctrlbtn down" onclick = "rtController.decreaseBtn(2)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="rtbtns rts">
+                    <div class="numrt" id = "secC">00</div>
+                    <div class="btnsrt">
+                        <div class="ctrlbtn up" onclick = "rtController.increaseBtn(1)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                        <div class="ctrlbtn down" onclick = "rtController.decreaseBtn(1)">
+                            <img src="images/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timerbtns">
+                <div class="timerbtn stop" onclick = "rtController.stopTimer()">СТОП</div>
+                <div class="timerbtn pause" id = "rtPause" onclick = "rtController.pauseTimer()">ПАУЗА</div>
+                <div class="timerbtn start" onclick = "rtController.startTimer()">СТАРТ</div>
+            </div>
+        </div>
+
+        <div class="triangle">
+            <div class="gdz">
+                <img src="images/geometry.jpeg" alt="">
+            </div>
+            <div class="calc">
+                <div class="calcEl name">Гдз по геометрии 7, 8, 9 класс Атанасян бесплатно</div>
+                <div class="calcEl desc">Чтобы получить пятерку по геометрии от Марь Иванны, нужно умножить длину основания на длину высоты и поделить все это на два. Проверить свои знания вы можете в форме ниже. Не использовать для списывания!</div>
+                <div class="calcEl fields">
+                    <form onsubmit = "calcTriangle()" method="dialog" class = "formTr">
+                        <div class="formelTr">
+                            <label for="aTri">Основание</label>
+                            <input type="text" class = "arr" name="" id="aTri">
+                        </div>
+                        <div class="formelTr">
+                            <label for="hTri">Высота</label>
+                            <input type="text" class ="arr" id = "hTri">
+                        </div>
+                        <input type="submit" id = "triSubm" class = "arr" value = "Посчитать" style = "margin-top: 10pt;">
+                        
+                    </form>
+                    <div class="triangleResult" style = "margin-top: 10pt;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test">
+            <div class="testcore">
+            <div class="testname">Тест</div>
+            <form method="dialog" onsubmit="checkTest()">
+                <div class="testel">
+                    <div class="questionName">1. Какая типизация используется в JS?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el1" value = "static" id = "static">
+                        <label for="static">Статическая</label>
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el1" value = "dynam" id= "dyname">
+                        <label for="dynam">Динамическая</label>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">2. Какая область видимости у переменной типа let?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el2" value = "block" id = "block">
+                        <label for="static">Блочная</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el2" value = "func" id = "func">
+                        <label for="dynam">Область функции</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el2" value = "global" id = "global">
+                        <label for="dynam">Глобальная</label>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <div class="testel">
+                    <div class="questionName">3. Какая область видимости у переменной типа var?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el3" value = "blockVar" id = "blockVar">
+                        <label>Блочная</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el3" value = "funcVar" id = "funcVar">
+                        <label>Область функции</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el3" value = "globalVar" id = "globalVar">
+                        <label>Глобальная</label>
+                        
+                    </div>
+                    
+                </div>
+
+
+                <div class="testel">
+                    <div class="questionName">4. Что будет, если использовать переменную типа let перед тем, как ее инициализировать?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el4" value = "nul" id = "nul">
+                        <label>Null</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el4" value = "naan" id = "naan">
+                        <label for="dynam">NaN</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el4" value = "error" id = "error">
+                        <label for="dynam">Ошибка</label>
+                       
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">5. Как выглядит тэг для JS?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el5" value = "javascripttag" id = "javascripttag">
+                        <label>JavaScipt</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el5" value = "jstag" id = "jstag">
+                        <label for="dynam">JS</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el5" value = "script" id = "script">
+                        <label for="dynam">script</label>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">6. Что такое JSON?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el6" value = "prlan" id = "prlan">
+                        <label>Язык программирования - усовершенствованная версия JS</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el6" value = "obnot" id = "obnot">
+                        <label for="dynam">JavaScript Object Notation - текстовый формат обмена данными</label>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">7. Какие типы переменных существуют в JS?</div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "int" id = "int">
+                        <label>int</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "varType" id = "varType">
+                        <label for="dynam">var</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "constType" id = "constType">
+                        <label for="dynam">const</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "float" id = "float">
+                        <label for="dynam">float</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "letType" id = "letType">
+                        <label for="dynam">let</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="checkbox" name = "el8" value = "string" id = "string">
+                        <label for="dynam">string</label>
+                        
+                    </div>
+                </div>
+
+
+                <div class="testel">
+                    <div class="questionName">8. Зачем нужен Fetch API?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el7" value = "req" id = "req">
+                        <label>Для отправки запросов на сервер</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el7" value = "brow" id = "brow">
+                        <label for="dynam">Для взаимодействия с браузером</label>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">9. Зачем нужен тип данных Symbol?</div>
+                    <div class="answerel">
+                        <input type="radio" name = "el9" value = "char" id = "char">
+                        <label>Для создания символов - аналогично char в C, Java ('a', 'Z')</label>
+                        
+                    </div>
+                    <div class="answerel">
+
+                        <input type="radio" name = "el9" value = "iden"id = "iden">
+                        <label for="dynam">Для создания уникальных идентификаторов</label>
+                       
+                    </div>
+                    
+                </div>
+
+                <div class="testel">
+                    <div class="questionName">10. Можем ли мы изменить элемент массива, записаный в const</div>
+                    
+                    <div class="answerel">
+                        <input type="radio" name = "el10" value = "yes" id = "yes">
+                        <label>Да</label>
+                        
+                    </div>
+                    <div class="answerel">
+                        <input type="radio" name = "el10" value = "no" id = "no">
+                        <label for="dynam">Нет</label>
+                        
+                    </div>
+                    
+                </div>
+
+                <input type="submit" class = "arr" value="Проверить" style="margin-top: 10pt;" id = "testSubm">
+            </form>
+            <div id="resultTest">Пока нет результата...</div>
+        </div>
+        </div>
+
+        
+
+    </div>
+    <div class = "menu">
+        <div class="topmenu">
+            <div class="backbtn" onclick = "showMenu()">
+                <img src="images/back.png" alt="back" id ="backimg">
+            </div>
+            <div class="head1">
+                 Меню
+            </div>
+            <div></div>
+        </div>
+        <div class="navi">
+            <div class="naviel" onclick = "switcherEl(1)">ГЛАВНАЯ</div>
+            <div class="naviel" onclick = "switcherEl(2)">СРАВНЕНИЕ СТРОК</div>
+            <div class="naviel" onclick = "switcherEl(3)">МАССИВ</div>
+            <div class="naviel" onclick = "switcherEl(4)">СЕКУНДОМЕР</div>
+            <div class="naviel" onclick = "switcherEl(6)">ТАЙМЕР</div>
+            <div class="naviel" onclick = "switcherEl(5)">ТЕСТ</div>
+            <div class="naviel" onclick = "switcherEl(7)">ТРЕУГОЛЬНИК</div>
+        </div>
+        <div class = "bottommenu">
+            <div class = "bottombtn" onclick = "logout()">
+                <img src="images/logout.png" alt="logout">
+            </div>
+            <div class = "bottombtn" onclick = "sleep()">
+                <img src="images/sleep.png" alt="sleep">
+            </div>
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+
+</html>
